@@ -3,10 +3,9 @@ configuration: Release
 
 install:
   - npm install npm@3.10.8 -g
-  - set PATH=%APPDATA%\npm;%PATH%
+  - set PATH=%APPDATA%\npm;src\node_modules\.bin;%PATH%
   - npm --version
   - cd src && npm install
-  - npm install gulp -g
 
 build:
   verbosity: minimal
