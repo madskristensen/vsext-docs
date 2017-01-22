@@ -65,7 +65,7 @@ public class PageParser
 
 	private MarkdownPage ParsePage(string fileName)
 	{
-        string html = Markdig.Markdown.ToHtml(File.ReadAllText(fileName), _pipeline);
+        string html = Markdown.ToHtml(File.ReadAllText(fileName), _pipeline);
 
 		HtmlTree tree = new HtmlTree(new TextStream(html));
 		tree.Build();
