@@ -3,7 +3,6 @@
 
 # User-specific files
 .vs
-**/[Bb]in/*.dll
 
 # Build results
 [Dd]ebug/
