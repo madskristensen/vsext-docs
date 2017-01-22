@@ -4,10 +4,12 @@ using System.Linq;
 using Microsoft.Html.Core.Tree;
 using Microsoft.Html.Core.Tree.Nodes;
 using Microsoft.Web.Core.Text;
+using Markdig;
 
 public class PageParser
 {
 	private const string _index = "index.md";
+    private static MarkdownPipeline _pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
 
 	public PageParser(string baseDirectory)
 	{
@@ -63,7 +65,7 @@ public class PageParser
 
 	private MarkdownPage ParsePage(string fileName)
 	{
-		string html = CommonMark.CommonMarkConverter.Convert(File.ReadAllText(fileName));
+        string html = Markdig.Markdown.ToHtml(File.ReadAllText(fileName), _pipeline);
 
 		HtmlTree tree = new HtmlTree(new TextStream(html));
 		tree.Build();
