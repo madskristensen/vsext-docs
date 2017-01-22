@@ -12,6 +12,7 @@ build:
   verbosity: minimal
 
 build_script:
+  - nuget restore -verbosity quiet
   - test\aspnet_compiler -p src -v -u output
   - cd src && gulp
 
