@@ -1,0 +1,47 @@
+﻿@import "variables";
+
+#search {
+    border-bottom: 1px solid #fff;
+    width: @menu-width;
+    overflow: hidden;
+    background: @menu-background-color;
+    position: relative;
+
+    label {
+        display: none;
+    }
+
+    input[type=search] {
+        padding: 6px 6px;
+        background: transparent;
+        font: inherit;
+        width: 100%;
+        float: left;
+        padding-left: 35px;
+        outline: none;
+        border: none;
+    }
+
+    input[type=image] {
+        border: 0;
+        padding: 0;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        outline: none;
+        color: transparent;
+    }
+}
+
+#searchresults a {
+    font-size: 1.3em;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}

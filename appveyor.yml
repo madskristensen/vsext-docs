@@ -1,0 +1,19 @@
+version: 1.0.{build}
+configuration: Release
+
+install:
+  - npm install npm@3.3.3 -g
+  - set PATH=%APPDATA%\npm;%PATH%
+  - npm --version
+  - cd src && npm install
+  - npm install gulp -g
+
+build:
+  verbosity: minimal
+
+build_script:
+  - test\aspnet_compiler -p src -v -u output
+  - cd src && gulp
+
+test_script:
+  - ps: .\test\test.ps1
