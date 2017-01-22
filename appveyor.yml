@@ -3,7 +3,7 @@ configuration: Release
 
 install:
   - npm install npm@3.10.8 -g
-  - set PATH=%APPDATA%\npm;src\node_modules\.bin;%PATH%
+  - set PATH=%APPDATA%\npm;%PATH%
   - npm --version
   - cd src && npm install
 
@@ -13,7 +13,7 @@ build:
 build_script:
   - nuget restore -verbosity quiet
   - test\aspnet_compiler -p src -v -u output
-  - cd src && gulp
+  - cd src && node_modules\.bin\gulp
 
 test_script:
   - ps: .\test\test.ps1
