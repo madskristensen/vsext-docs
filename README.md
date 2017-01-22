@@ -1,10 +1,8 @@
 ## Visual Studio features for web developers
 
-[![Build status](https://ci.appveyor.com/api/projects/status/3s1bavm412p4bwp6?svg=true)](https://ci.appveyor.com/project/madskristensen/vsweb-docs)
+[![Build status](https://ci.appveyor.com/api/projects/status/ekhjhyg5s6r2rkjq?svg=true)](https://ci.appveyor.com/project/madskristensen/vsext-docs)
 
-[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
-
-Website: [vsweb.azurewebsites.net/](http://vsweb.azurewebsites.net/)
+Website: [vsix.azurewebsites.net/](http://vsix.azurewebsites.net/)
 
 ### Features
 
