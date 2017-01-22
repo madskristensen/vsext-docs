@@ -1,10 +1,10 @@
 {
-	"name": "",
+	"name": "vs",
 	"version": "1.0.0",
 	"private": true,
 	"devDependencies": {
-		"gulp": "3.8.11",
-		"gulp-less": "3.0.0",
-		"gulp-concat": "2.5.2"
-	}	
+		"gulp": "3.9.1",
+		"gulp-less": "3.3.0",
+		"gulp-concat": "2.6.1"
+	}
 }

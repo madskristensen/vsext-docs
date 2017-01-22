@@ -2,7 +2,7 @@ version: 1.0.{build}
 configuration: Release
 
 install:
-  - npm install npm@3.3.3 -g
+  - npm install npm@3.10.8 -g
   - set PATH=%APPDATA%\npm;%PATH%
   - npm --version
   - cd src && npm install
