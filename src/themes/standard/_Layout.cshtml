@@ -104,8 +104,6 @@
         </div>
     </footer>
 
-    <script src="@Helpers.Fingerprint("/themes/" + Page.Theme + "/output/site.js")" async></script>
-
     <div>
         <meta itemprop="url" content="@baseUrl" />
         <meta itemprop="name" content="@ConfigurationManager.AppSettings["name"]" />
@@ -113,19 +111,12 @@
         <meta itemprop="image" content="@(baseUrl + "/themes/standard/favicon/mstile-310x310.png")" />
         <meta itemprop="downloadUrl" content="http://www.visualstudio.com/en-us/products/free-developer-offers-vs.aspx" />
         <meta itemprop="audience" content="Developers" />
-        <meta itemprop="softwareVersion version" content="2015" />
+        <meta itemprop="softwareVersion version" content="2017" />
         <meta itemprop="operatingSystem" content="Windows" />
         <meta itemprop="applicationCategory" content="Integrated Development Environment" />
         <meta itemprop="publisher" content="Microsoft Corp." />
-        <div itemscope itemtype="http://schema.org/Offer" itemprop="offers">
-            <meta itemprop="price" content="0" />
-            <meta itemprop="priceCurrency" content="USD" />
-            <meta itemprop="sku" content="Visual Studio Community" />
-        </div>
-        <div itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating">
-            <meta itemprop="ratingValue" content="5" />
-            <meta itemprop="ratingCount" content="100" />
-        </div>
     </div>
+
+    <script src="@Helpers.Fingerprint("/themes/" + Page.Theme + "/output/site.js")" async defer></script>
 </body>
 </html>
