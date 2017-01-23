@@ -2,7 +2,8 @@
 
 var gulp = require("gulp"),
 	less = require("gulp-less"),
-	concat = require("gulp-concat");
+    concat = require("gulp-concat"),
+    uglify = require("gulp-uglify")
 
 var path = "./themes/standard/";
 
@@ -10,7 +11,8 @@ gulp.task("default", ["less", "scripts"]);
 
 gulp.task("scripts", function () {
 	gulp.src([path + "js/*.js"])
-		.pipe(concat("site.js"))
+        .pipe(concat("site.js"))
+        .pipe(uglify({ compress: true}))
 		.pipe(gulp.dest(path + "output"));
 });
 
